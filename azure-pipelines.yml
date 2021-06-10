@@ -20,4 +20,3 @@ steps:
    provider : 'azurem'
    command : 'init'
    workingDirectory: '$(system/Defaultworkingdirectory)'
-   backendAzureRmResourceGroupName:'$(resourceGroup)'
