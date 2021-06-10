@@ -14,10 +14,10 @@ steps:
   inputs: 
    terraformversion : '1.0.0'
 
-Settings
+
 - task: TerraformTaskV1@0
-inputs:
-provider : 'azurem'
-command : 'init'
-workingDirectory: '$(system/Defaultworkingdirectory)'
-backendResourceRMgroupName:'$(resourceGroup)'
+  inputs:
+   provider : 'azurem'
+   command : 'init'
+   workingDirectory: '$(system/Defaultworkingdirectory)'
+   backendResourceRMgroupName:'$(resourceGroup)'
