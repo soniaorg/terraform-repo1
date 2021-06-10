@@ -14,8 +14,8 @@ steps:
   inputs: 
    terraformversion : '1.0.0'
 
-settings
--task:TerraformTaskV1@0
+Settings
+- task: TerraformTaskV1@0
 inputs:
 provider : 'azurem'
 command : 'init'
