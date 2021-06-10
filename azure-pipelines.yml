@@ -11,8 +11,7 @@ pool:
 
 steps:
 - task: TerraformInstaller@0
-displayName: Install terraform V1.0.0
-inputs : 
+ inputs: 
    terraformversion : 'V1.0.0'
 
 settings
