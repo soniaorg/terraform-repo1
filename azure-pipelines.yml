@@ -15,3 +15,10 @@ displayName: Install terraform V1.0.0
 inputs : 
    terraformversion : 'V1.0.0'
 
+settings
+-task:TerraformTaskV1@0
+inputs:
+provider : 'azurem'
+command : 'init'
+workingDirectory: '$(system/Defaultworkingdirectory)'
+backendResourceRMgroupName:'$(resourceGroup)'
