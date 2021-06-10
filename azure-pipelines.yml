@@ -10,13 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
-- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
-  displayName: 'Use Terraform latest'
- 
-- task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
-  displayName: 'Terraform : INIT'
-  inputs:
-    backendServiceArm: 'Jonnychipz-TFSPN'
-    backendAzureRmResourceGroupName: 'jonnychipz-infra'
-    workingDirectory: '$(system/Defaultworkingdirectory)'
+settings
+- task: TerraformInstaller
+    displayName: install terraform
+    inputs:
+        terraformVersion: latest
