@@ -1,11 +1,11 @@
 stages:
   - stage : validate
-jobs :
- jobs: validate
- steps:
- - task: DownloadGitHubRelease@0
-   inputs:
-     connection: 'asonia8930'
-     userRepository: 'soniaorg/terraform-repo1'
-     defaultVersionType: 'latest'
-     downloadPath: '$(System.ArtifactsDirectory)'
+    jobs :
+     job: validate
+     steps:
+     - task: DownloadGitHubRelease@0
+       inputs:
+       connection: 'asonia8930'
+       userRepository: 'soniaorg/terraform-repo1'
+       defaultVersionType: 'latest'
+       downloadPath: '$(System.ArtifactsDirectory)'
