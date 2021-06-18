@@ -7,13 +7,15 @@ stages:
           inputs:
             command: 'init'
             allowTelemetryCollection: true
-        - task: TerraformCLI@0
-          inputs:
-            command: 'plan'
-            allowTelemetryCollection: true
-        - task: TerraformCLI@0
-          inputs:
-            command: 'apply'
-            allowTelemetryCollection: true
+      - task: TerraformCLI@0
+        inputs:
+          command: 'plan'
+          environmentServiceName: 'Free Trial(3a59e0ba-f9d4-44e0-b84e-d9af3eb93c91)'
+          allowTelemetryCollection: true
+      - task: TerraformCLI@0
+        inputs:
+          command: 'apply'
+          environmentServiceName: 'Free Trial(3a59e0ba-f9d4-44e0-b84e-d9af3eb93c91)'
+          allowTelemetryCollection: true
 
 
