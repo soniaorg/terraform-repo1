@@ -8,3 +8,6 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+
+steps:
+ - script: echo "Testing resource template"
