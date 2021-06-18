@@ -5,9 +5,13 @@
 
 trigger:
 - main
+container:
 
 pool:
   vmImage: ubuntu-latest
 
+ paths:
+    include:
+    - main
 steps:
  - script: echo "Testing resource template"
