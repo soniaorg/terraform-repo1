@@ -1,15 +1,11 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-  branches:
-    include:
-    - main/main
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
- - script: echo "Testing resource template"
+stages:
+  - stage : validate
+jobs :
+ jobs: validate
+Steps:
+ - task: DownloadGitHubRelease@0
+   inputs:
+     connection: 'asonia8930'
+     userRepository: 'soniaorg/terraform-repo1'
+     defaultVersionType: 'latest'
+     downloadPath: '$(System.ArtifactsDirectory)'
