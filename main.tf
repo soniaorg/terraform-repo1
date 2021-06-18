@@ -2,6 +2,7 @@ provider "azurerm" {
   features {}
 }
 
+az login
 variable  prefix_name{
   default= "MYRG"
 }
