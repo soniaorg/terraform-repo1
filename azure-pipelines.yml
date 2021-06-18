@@ -2,20 +2,21 @@ stages:
   - stage: validate
     jobs:
       - job: validate
-        steps:
-          - task : 
-- task: TerraformCLI@0
-  inputs:
-    command: 'init'
-    backendType: 'azurerm'
-    allowTelemetryCollection: true
+        steps :
+        - task: TerraformCLI@0
+          inputs:
+            command: 'init'
+            allowTelemetryCollection: true
+            
+            - task: TerraformCLI@0
+              inputs:
+                command: 'plan'
+                allowTelemetryCollection: true
 
-- task: TerraformCLI@0
-  inputs:
-    command: 'plan'
-    allowTelemetryCollection: true
-    
-- task: TerraformCLI@0
-  inputs:
-    command: 'apply'
-    allowTelemetryCollection: true
+                - task: TerraformCLI@0
+                  inputs:
+                    command: 'apply'
+                    allowTelemetryCollection: true
+       
+
+
