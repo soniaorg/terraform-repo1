@@ -1,11 +1,11 @@
 stages:
-  - stage : validate
-    jobs :
-     - job: validate
-       steps:
-     - task: DownloadGitHubRelease@0
-       inputs:
-       connection: 'asonia8930'
-       userRepository: 'soniaorg/terraform-repo1'
-       defaultVersionType: 'latest'
-       downloadPath: '$(System.ArtifactsDirectory)'
+  - stage: validate
+    jobs:
+      - job: validate
+        steps:
+          - task : 
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    backendType: 'azurerm'
+    allowTelemetryCollection: true
