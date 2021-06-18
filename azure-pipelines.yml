@@ -2,7 +2,7 @@ stages:
   - stage : validate
 jobs :
  jobs: validate
-Steps:
+ steps:
  - task: DownloadGitHubRelease@0
    inputs:
      connection: 'asonia8930'
