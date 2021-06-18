@@ -46,7 +46,7 @@ resource "azurerm_virtual_machine" "virtualm"{
   vm_size               = "Standard_DS1_v2"
 
   
- storage_image_reference {
+ storage_image_reference1 {
     publisher = "Canonical"
     offer     = "UbuntuServer"
     sku       = "16.04-LTS"
@@ -95,8 +95,13 @@ module "mylb" {
 
 resource "azurerm_network_interface_backend_address_pool_association" "vault" {
   network_interface_id    = "${azurerm_network_interface.main.id}"
-  ip_configuration_name   = "configiration"
+  ip_configuration_name   = "configiration12"
   backend_address_pool_id = "${azurerm_virtual_machine.virtualm.name}"
+}
+
+azurerm "resource_group_name" "main" {
+  name = "resource_group_test"
+  location = "East_US"
 }
 
 
