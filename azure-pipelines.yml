@@ -4,14 +4,12 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
-container:
+  branches:
+    include:
+    - main
 
 pool:
   vmImage: ubuntu-latest
 
- paths:
-    include:
-    - main
 steps:
  - script: echo "Testing resource template"
