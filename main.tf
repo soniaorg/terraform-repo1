@@ -2,11 +2,7 @@ provider "azurerm" {
   features {}
 }
 
-variable  prefix_name{
-  default= "MYRG"
-}
-
 resource "azurerm_resource_group" "main"{
-  name = "${var.prefix_name}-resources"
+  name = var.resource_grp
   location = "West Europe"
 }
